@@ -1,2 +1,2 @@
-# snabbget.github.io
+# SnabbGET.github.io
 SnabbGET Website
