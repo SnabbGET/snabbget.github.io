@@ -11,6 +11,7 @@ html {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	background-color: #000;
 	height: 100vh;
 }
 
@@ -32,7 +33,7 @@ p {
 	
 	
 	/*! Don't comment this !! */
-
+	/* LAPCoder: LOL          */
 	font-size: 0px;
 
 }

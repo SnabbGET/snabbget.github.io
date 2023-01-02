@@ -15,7 +15,6 @@
 			    font-size: 25px;
 			}
 		</style>
-		COMING SOON
 		<script id="asciicast-k008RY22P7XVQ9uEdBkyYOXpp" async>
 			// asciinema embedded player
 
@@ -77,6 +76,8 @@
 
 					var asciicastId = script.id.split("-")[1];
 
+					var Ratio = "calc(56 / 80 * 80vw)";
+
 					var container = document.createElement("div");
 					container.id = "asciicast-container-" + asciicastId;
 					container.className = "asciicast";
@@ -85,7 +86,8 @@
 					container.style.overflow = "hidden";
 					container.style.padding = 0;
 					container.style.margin = "20px 0";
-					container.style.height = "100vh";
+					container.style.height = Ratio;
+					container.style.width  = "80vw";
 
 					insertAfter(script, container);
 
@@ -100,10 +102,10 @@
 					iframe.style.margin = 0;
 					iframe.style.border = 0;
 					iframe.style.display = "inline-block";
-					iframe.style.width = "100%";
+					iframe.style.width = "80vw";
 					iframe.style.float = "none";
 					iframe.style.visibility = "hidden";
-					iframe.style.height = "100vh";
+					iframe.style.height = "calc(56 / 80 * 80vw)";
 					iframe.onload = function () {
 						this.style.visibility = "visible";
 					};
@@ -134,5 +136,6 @@
 				[].forEach.call(scripts, insertPlayer);
 			})();
 		</script>
+		MORE COMING SOON
 	</body>
 </html>
