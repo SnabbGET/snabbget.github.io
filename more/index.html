@@ -1,20 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <title>SnabbGET</title>
-</head>
-<body>
-    <style>
-        body {
-            color: aliceblue;
-            margin: 100px 100px;
-            font-size: 25px;
-        }
-    </style>
-    COMING SOON
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../style.css" />
+		<title>SnabbGET</title>
+	</head>
+	<body>
+		<style>
+			body {
+			    color: aliceblue;
+			    margin: 100px 100px;
+			    font-size: 25px;
+			}
+		</style>
+		COMING SOON
+		<script id="asciicast-k008RY22P7XVQ9uEdBkyYOXpp" async>
+			// asciinema embedded player
+
+			// THIS FUNCTION COME FROM ASCIINEMA UNDER
+			// GNU General Public License v3.0
+
+			(function () {
+				function insertAfter(referenceNode, newNode) {
+					referenceNode.parentNode.insertBefore(
+						newNode,
+						referenceNode.nextSibling
+					);
+				}
+
+				function params(container, script) {
+					function format(name) {
+						var value = script.getAttribute("data-" + name);
+						if (value) {
+							return name + "=" + value;
+						}
+					}
+
+					var options = [
+						"size",
+						"speed",
+						"autoplay",
+						"loop",
+						"theme",
+						"t",
+						"startAt",
+						"preload",
+						"cols",
+						"rows",
+						"i",
+						"idleTimeLimit",
+					];
+
+					return "?" + options.map(format).filter(Boolean).join("&");
+				}
+
+				function locationFromString(string) {
+					var parser = document.createElement("a");
+					parser.href = string;
+					return parser;
+				}
+
+				function apiHostFromScript(script) {
+					var location = locationFromString(script.src);
+					return location.protocol + "//" + location.host;
+				}
+
+				function insertPlayer(script) {
+					// do not insert player if there's one already associated with this script
+					if (script.dataset.player) {
+						return;
+					}
+
+					var apiHost = apiHostFromScript(script);
+
+					var asciicastId = script.id.split("-")[1];
+
+					var container = document.createElement("div");
+					container.id = "asciicast-container-" + asciicastId;
+					container.className = "asciicast";
+					container.style.display = "block";
+					container.style.float = "none";
+					container.style.overflow = "hidden";
+					container.style.padding = 0;
+					container.style.margin = "20px 0";
+					container.style.height = "100vh";
+
+					insertAfter(script, container);
+
+					var iframe = document.createElement("iframe");
+					iframe.src =
+						"./iframeDemo.html" + params(container, script);
+					iframe.id = "asciicast-iframe-" + asciicastId;
+					iframe.name = "asciicast-iframe-" + asciicastId;
+					iframe.scrolling = "no";
+					iframe.setAttribute("allowFullScreen", "true");
+					iframe.style.overflow = "hidden";
+					iframe.style.margin = 0;
+					iframe.style.border = 0;
+					iframe.style.display = "inline-block";
+					iframe.style.width = "100%";
+					iframe.style.float = "none";
+					iframe.style.visibility = "hidden";
+					iframe.style.height = "100vh";
+					iframe.onload = function () {
+						this.style.visibility = "visible";
+					};
+
+					container.appendChild(iframe);
+
+					function receiveSize(e) {
+						var name = e.data[0];
+						var data = e.data[1];
+
+						if (
+							e.origin === apiHost &&
+							e.source === iframe.contentWindow &&
+							name === "resize"
+						) {
+							iframe.style.height = "" + data.height + "px";
+						}
+					}
+
+					window.addEventListener("message", receiveSize, false);
+
+					script.dataset.player = container;
+				}
+
+				var scripts = document.querySelectorAll(
+					"script[id^='asciicast-']"
+				);
+				[].forEach.call(scripts, insertPlayer);
+			})();
+		</script>
+	</body>
 </html>
