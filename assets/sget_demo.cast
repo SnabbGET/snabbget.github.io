@@ -197,7 +197,7 @@
 [100.902796, "o", "\r\r\r\n\u001b[1m\u001b[92mpi@raspberrypi\u001b[39m:\u001b[94m~/SnabbGET $\u001b[0m "]
 [105.90654, "o", "\r\r\r\n~/SnabbGET>\u001b[0m "]
 [110.909985, "o", "\r\r\nPS ~/SnabbGET>\u001b[0m "]
-[115.91425, "o", "\r\r\n\u001b[1A\u001b[?2004h\r\r\r\n\u001b[1m\u001b[92mpi@raspberrypi\u001b[39m:\u001b[96m~/SnabbGET\u001b[39m#\u001b[38;5;208m18:14:25\u001b[93m\u001b[93m [DEBUG]\u001b[95m |>\u001b[0m "]
+[115.91425, "o", "\r\r\n\u001b[1A\u001b[?2004h\r\r\r\n\u001b[1m\u001b[92mpi@raspberrypi\u001b[39m:\u001b[96m~/SnabbGET\u001b[39m#\u001b[38;5;208m15:32:13\u001b[93m\u001b[93m [DEBUG]\u001b[95m |>\u001b[0m "]
 [120.919825, "o", "c"]
 [121.120727, "o", "l"]
 [121.321765, "o", "s"]
