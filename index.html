@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./style.css">
-	<script src="./script.js"></script>
-	<title>SnabbGET</title>
-</head>
-<body>
-	<div class="container">
-		<p>
-			<span>
-				SnabbGET
-			</span>
-		</p>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./style.css">
+		<script src="./script.js"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.js"
+			integrity="sha512-5SUkiwmm+0AiJEaCiS5nu/ZKPodeuInbQ7CiSrSnUHe11dJpQ8o4J1DU/rw4gxk/O+WBpGYAZbb8e17CDEoESw=="
+			crossorigin="anonymous"
+		></script>
+		<title>SnabbGET</title>
+	</head>
+	<body>
+		<div class="container">
+			<p>
+				<span>
+					SnabbGET
+				</span>
+			</p>
 
-		<p>
-			<span>
-				The only terminal with a UI, for beginners.
-			</span>
-		</p>
-	</div>
-	<a href="./more/" class="animated-link">
-		<span>Learn more</span>
-	</a>
-</body>
+			<p>
+				<span>
+					The only terminal with a UI, for beginners.
+				</span>
+			</p>
+		</div>
+		<a href="./more/" class="animated-link">
+			<span>Learn more</span>
+		</a>
+
+		<!-- Thanks to https://codepen.io/rebelchris/pen/jOMGweo for this part -->
+		<input type="checkbox" id="toggle" class="toggle--checkbox" onclick='if ($("#toggle:checked") !== null)
+																				 $("html").style.setProperty("--invert", "100%");
+																			else $("html").style.setProperty("--invert", "0%");' />
+		<label for="toggle" class="toggle--label">
+			<span class="toggle--label-background"></span>
+		</label>
+	</body>
 </html>
