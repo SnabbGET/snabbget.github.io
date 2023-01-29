@@ -41,14 +41,25 @@ p {
 
 }
 
-p span {
+p a, p span {
 	display: inline-block;
 	position: relative;
 	overflow: hidden;
+	color: white;
 	font-size: clamp(15px, 6vw, 60px);
 }
 
-p span::after {
+a {
+	text-decoration: underline;
+	text-decoration-color: #0000;
+	transition: text-decoration-color 0.5s;
+}
+
+a:hover {
+	text-decoration-color: white;
+}
+
+p a::after, p span::after {
 	content: '';
 	display: block;
 	position: absolute;
