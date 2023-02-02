@@ -35,8 +35,7 @@ p {
 	color: transparent;
 
 
-	/*! Don't comment this !! */
-	/* LAPCoder: LOL          */
+	/*! Don't comment this below !! */
 	font-size: 0px;
 
 }
@@ -45,11 +44,12 @@ p a, p span {
 	display: inline-block;
 	position: relative;
 	overflow: hidden;
-	color: white;
 	font-size: clamp(15px, 6vw, 60px);
 }
 
 a {
+	color: aliceblue;
+	color: transparent;
 	text-decoration: underline;
 	text-decoration-color: #0000;
 	transition: text-decoration-color 0.5s;
@@ -69,6 +69,8 @@ p a::after, p span::after {
 	left: 0;
 	transform: translateX(-100%);
 }
+
+/* ANIMATIONS */
 
 p:nth-child(1) {
 	font-weight: lighter;
@@ -107,6 +109,8 @@ p:nth-child(2) span::after {
 	}
 }
 
+/* BUTTON */ 
+
 #button {
 	background-color: rgba(72, 22, 4, 0.9);
 	border: none;
@@ -118,6 +122,8 @@ p:nth-child(2) span::after {
 	display: inline-block;
 	font-size: 16px;
 }
+
+/* ANIMATED LINK */
 
 .animated-link {
 	display: inline-block;
@@ -146,6 +152,9 @@ p:nth-child(2) span::after {
 	color: #bebebe;
 	background: #511c1c;
 }
+
+/* ----------------------------------------------------------------------------------------------- */
+
 
 /* Thanks to https://codepen.io/rebelchris/pen/jOMGweo for this part */
 
@@ -180,10 +189,9 @@ body {
 	display: none;
 }
 
-.toggle--checkbox:checked {
-	/** This will all flip from sun to moon **/
-	/** Change the label color **/
-}
+/** This will all flip from sun to moon **/
+/** Change the label color **/
+.toggle--checkbox:checked {  }
 
 .toggle--checkbox:checked ~ .background {
 	background: var(--indigo-background);
