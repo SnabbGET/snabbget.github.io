@@ -44,12 +44,11 @@ p a, p span {
 	display: inline-block;
 	position: relative;
 	overflow: hidden;
+	color: white;
 	font-size: clamp(15px, 6vw, 60px);
 }
 
 a {
-	color: aliceblue;
-	color: transparent;
 	text-decoration: underline;
 	text-decoration-color: #0000;
 	transition: text-decoration-color 0.5s;
