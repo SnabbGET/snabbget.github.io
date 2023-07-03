@@ -72,12 +72,12 @@ p a::after, p span::after {
 
 /* ANIMATIONS */
 
-p:nth-child(1) {
+.title {
 	font-weight: lighter;
 	animation: text-reveal .15s .80s forwards;
 }
 
-p:nth-child(2) {
+.desc {
 	animation: text-reveal .15s 1.1s forwards;
 }
 
